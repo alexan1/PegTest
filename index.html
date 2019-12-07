@@ -4,29 +4,33 @@
     <meta charset="utf-8" />
     <title>pegasie</title>
 </head>
-<body>    
-    <input type="file" id="files" name="files[]" multiple />
-    <output id="list"></output>
+<body>
+    <input id="file" type="file" multiple onchange="startRead()">    
+    <h3>File contents:</h3>
+    <pre>
+    <code id="output">
+			</code>
+		</pre>
     <table border="1" cellpadding="2" cellspacing="2" style="grid-column-end">
         <tr>
-            <td>8</td>
-            <td>3</td>
-            <td>2</td>
+            <td id="11"></td>
+            <td id="21"></td>
+            <td id="31"></td>
         </tr>
         <tr>
-            <td>5</td>
-            <td>10</td>
-            <td>4</td>
+            <td id="12"></td>
+            <td id="22"></td>
+            <td id="32"></td>
         </tr>
         <tr>
-            <td>6</td>
-            <td>6</td>
-            <td>1</td>
+            <td id="13"></td>
+            <td id="23"></td>
+            <td id="33"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="r1"></td>
+            <td id="r2"></td>
+            <td id="r3"></td>
         </tr>
     </table>
 
