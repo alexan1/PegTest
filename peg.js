@@ -30,22 +30,18 @@ function loaded(evt) {
     var fileString = evt.target.result;
     document.getElementById('output').innerHTML = fileString;
     var res = fileString.split("\n");
-    res.forEach(splitFun);
-    
-    function splitFun(item) {
-        var i = 0;
-        var numb = item.split(";");
-        i = i + 1;
-        console.log("i", i);
-        var id = "1" + i;
-        console.log("id", id);
-        document.getElementById(id).innerHTML = numb[0];
-        document.getElementById('2' + i).innerHTML = numb[1];
-        document.getElementById('3' + i).innerHTML = numb[2];        
-        console.log(numb);
+    //var i;
+    for (i = 0; i < 3; i++) {
+
+        var num = res[i].split(";");
+        for (j = 0; j < 3; j++) {
+            var id = (j + 1).toString() + (i + 1).toString();
+            console.log("id", id);
+            document.getElementById(id).innerHTML = num[j];            
+        }
     }
-    console.log(res);    
 }
+    
 
 function errorHandler(evt) {
     if (evt.target.error.code == evt.target.error.NOT_READABLE_ERR) {
